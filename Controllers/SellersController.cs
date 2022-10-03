@@ -35,5 +35,12 @@ namespace SalesWebMvc.Controllers
             _sellerService.Insert(seller);
             return RedirectToAction(nameof(Index));
         }
+
+        [HttpDelete]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(Seller seller)
+        {
+            return View();
+        }
     }
 }
